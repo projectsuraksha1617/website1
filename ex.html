@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<title>
+	Geo location
+	</title>
+</head>
+<body >
+<button id="get_location" onclick="map();">Get location</button>
+<div id="map">
+<iframe id="google_map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in?output=embed"></iframe>
+</div>
+<script type="text/javascript">
+	function map(){
+	var c=function(pos){
+		var lat =pos.coords.latitude,
+			long= pos.coords.longitude,
+			coords=lat+','+long;
+
+
+			document.getElementById('google_map').setAttribute('src','https://maps.google.co.in/?q='+coords+'&z=60&output=embed');
+	}
+
+	document.getElementById('get_location').onclick=function(){
+navigator.geolocation.getCurrentPosition(c);
+return false;
+
+	}
+}
+
+</script>
+</body>
+</html>

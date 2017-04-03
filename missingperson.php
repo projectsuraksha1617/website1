@@ -123,7 +123,7 @@ window.history.forward();
 									<div class="form-group">
 									<label class="col-md-3 control-label" for="name"> Age</label>
 									<div class="col-md-9">
-									<input id="name" name="age" type="text" placeholder="Age" required class="form-control" pattern="[0-9]*">
+									<input id="name" name="age" type="text" placeholder="Age" required class="form-control" maxlength="3" pattern="[0-9]*" title="Enetr only numbers">
 									</div>
 									</div>
 									<div class="form-group">
